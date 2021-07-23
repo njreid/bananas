@@ -1,0 +1,1256 @@
+{
+  "data": [
+    {
+      "gid": "1200587322709832",
+      "archived": false,
+      "color": "light-blue",
+      "created_at": "2021-07-13T04:24:48.751Z",
+      "current_status": null,
+      "custom_fields": [
+        {
+          "gid": "1182097226423118",
+          "enabled": true,
+          "enum_options": [
+            {
+              "gid": "1182097226423121",
+              "color": "aqua",
+              "enabled": true,
+              "name": "Development",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423120",
+              "color": "blue",
+              "enabled": true,
+              "name": "QA",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423123",
+              "color": "purple",
+              "enabled": true,
+              "name": "Planning/Design",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423124",
+              "color": "red",
+              "enabled": true,
+              "name": "Requirements",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182117918207256",
+              "color": "orange",
+              "enabled": true,
+              "name": "Queued",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423119",
+              "color": "yellow-green",
+              "enabled": true,
+              "name": "Done",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423122",
+              "color": "cool-gray",
+              "enabled": true,
+              "name": "Not Started",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1200055983904289",
+              "color": "yellow-orange",
+              "enabled": true,
+              "name": "Deployment Started",
+              "resource_type": "enum_option"
+            }
+          ],
+          "enum_value": {
+            "gid": "1182097226423121",
+            "color": "aqua",
+            "enabled": true,
+            "name": "Development",
+            "resource_type": "enum_option"
+          },
+          "name": "Amplify Status (Portfolio)",
+          "created_by": { "gid": "1142653424674712", "name": "Jake Litwicki", "resource_type": "user" },
+          "display_value": "Development",
+          "resource_subtype": "enum",
+          "resource_type": "custom_field",
+          "type": "enum"
+        }
+      ],
+      "custom_field_settings": [
+        {
+          "gid": "1200595743539309",
+          "custom_field": {
+            "gid": "1143292379918547",
+            "name": "Story Points",
+            "precision": 0,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709832", "name": "Lambda Authorizers", "resource_type": "project" },
+          "project": { "gid": "1200587322709832", "name": "Lambda Authorizers", "resource_type": "project" },
+          "resource_type": "custom_field_setting"
+        },
+        {
+          "gid": "1200595743539331",
+          "custom_field": {
+            "gid": "1199680225867879",
+            "enum_options": [
+              {
+                "gid": "1199680225867880",
+                "color": "cool-gray",
+                "enabled": true,
+                "name": "Not started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867882",
+                "color": "green",
+                "enabled": true,
+                "name": "In progress",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867883",
+                "color": "yellow",
+                "enabled": true,
+                "name": "Code review",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867884",
+                "color": "magenta",
+                "enabled": true,
+                "name": "QA ready",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867885",
+                "color": "red",
+                "enabled": true,
+                "name": "QA changes",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867886",
+                "color": "blue-green",
+                "enabled": true,
+                "name": "Deploy started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200179995173808",
+                "color": "yellow-green",
+                "enabled": true,
+                "name": "Done/Deployed/Merged",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199982544802529",
+                "color": "pink",
+                "enabled": true,
+                "name": "Needs tech design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200108733043320",
+                "color": "purple",
+                "enabled": true,
+                "name": "Needs UX design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867881",
+                "color": "orange",
+                "enabled": true,
+                "name": "Needs requirements",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867887",
+                "color": "none",
+                "enabled": true,
+                "name": "Descoped/Icebox",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200399289360765",
+                "color": "green",
+                "enabled": false,
+                "name": "Done",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434802332391",
+                "color": "aqua",
+                "enabled": false,
+                "name": "Grooming",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708601",
+                "color": "blue",
+                "enabled": false,
+                "name": "Planning",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708602",
+                "color": "indigo",
+                "enabled": false,
+                "name": "Backlog",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200143598071344",
+                "color": "red",
+                "enabled": true,
+                "name": "Blocked",
+                "resource_type": "enum_option"
+              }
+            ],
+            "name": "Amplify Delivery status",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709832", "name": "Lambda Authorizers", "resource_type": "project" },
+          "project": { "gid": "1200587322709832", "name": "Lambda Authorizers", "resource_type": "project" },
+          "resource_type": "custom_field_setting"
+        }
+      ],
+      "default_view": "list",
+      "due_on": null,
+      "due_date": null,
+      "followers": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "is_template": false,
+      "members": [
+        { "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" },
+        { "gid": "1169676617484666", "name": "Michael Labieniec", "resource_type": "user" }
+      ],
+      "modified_at": "2021-07-19T17:40:53.683Z",
+      "name": "Lambda Authorizers",
+      "notes": "",
+      "owner": { "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" },
+      "permalink_url": "https://app.asana.com/0/1200587322709832/1200587322709832",
+      "public": true,
+      "resource_type": "project",
+      "start_on": null,
+      "team": { "gid": "1200056430667281", "name": "Amplify Libraries", "resource_type": "team" },
+      "workspace": { "gid": "8442528107068", "name": "amazon.com", "resource_type": "workspace" }
+    },
+    {
+      "gid": "1200587322709803",
+      "archived": false,
+      "color": "light-blue",
+      "created_at": "2021-07-13T04:24:35.243Z",
+      "current_status": null,
+      "custom_fields": [
+        {
+          "gid": "1182097226423118",
+          "enabled": true,
+          "enum_options": [
+            {
+              "gid": "1182097226423121",
+              "color": "aqua",
+              "enabled": true,
+              "name": "Development",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423120",
+              "color": "blue",
+              "enabled": true,
+              "name": "QA",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423123",
+              "color": "purple",
+              "enabled": true,
+              "name": "Planning/Design",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423124",
+              "color": "red",
+              "enabled": true,
+              "name": "Requirements",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182117918207256",
+              "color": "orange",
+              "enabled": true,
+              "name": "Queued",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423119",
+              "color": "yellow-green",
+              "enabled": true,
+              "name": "Done",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423122",
+              "color": "cool-gray",
+              "enabled": true,
+              "name": "Not Started",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1200055983904289",
+              "color": "yellow-orange",
+              "enabled": true,
+              "name": "Deployment Started",
+              "resource_type": "enum_option"
+            }
+          ],
+          "enum_value": {
+            "gid": "1182097226423124",
+            "color": "red",
+            "enabled": true,
+            "name": "Requirements",
+            "resource_type": "enum_option"
+          },
+          "name": "Amplify Status (Portfolio)",
+          "created_by": { "gid": "1142653424674712", "name": "Jake Litwicki", "resource_type": "user" },
+          "display_value": "Requirements",
+          "resource_subtype": "enum",
+          "resource_type": "custom_field",
+          "type": "enum"
+        }
+      ],
+      "custom_field_settings": [
+        {
+          "gid": "1200595665354437",
+          "custom_field": {
+            "gid": "1143292379918547",
+            "name": "Story Points",
+            "precision": 0,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+          },
+          "is_important": true,
+          "parent": {
+            "gid": "1200587322709803",
+            "name": "Client-side encryption (Android, iOS)",
+            "resource_type": "project"
+          },
+          "project": {
+            "gid": "1200587322709803",
+            "name": "Client-side encryption (Android, iOS)",
+            "resource_type": "project"
+          },
+          "resource_type": "custom_field_setting"
+        },
+        {
+          "gid": "1200595665354447",
+          "custom_field": {
+            "gid": "1199680225867879",
+            "enum_options": [
+              {
+                "gid": "1199680225867880",
+                "color": "cool-gray",
+                "enabled": true,
+                "name": "Not started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867882",
+                "color": "green",
+                "enabled": true,
+                "name": "In progress",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867883",
+                "color": "yellow",
+                "enabled": true,
+                "name": "Code review",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867884",
+                "color": "magenta",
+                "enabled": true,
+                "name": "QA ready",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867885",
+                "color": "red",
+                "enabled": true,
+                "name": "QA changes",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867886",
+                "color": "blue-green",
+                "enabled": true,
+                "name": "Deploy started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200179995173808",
+                "color": "yellow-green",
+                "enabled": true,
+                "name": "Done/Deployed/Merged",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199982544802529",
+                "color": "pink",
+                "enabled": true,
+                "name": "Needs tech design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200108733043320",
+                "color": "purple",
+                "enabled": true,
+                "name": "Needs UX design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867881",
+                "color": "orange",
+                "enabled": true,
+                "name": "Needs requirements",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867887",
+                "color": "none",
+                "enabled": true,
+                "name": "Descoped/Icebox",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200399289360765",
+                "color": "green",
+                "enabled": false,
+                "name": "Done",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434802332391",
+                "color": "aqua",
+                "enabled": false,
+                "name": "Grooming",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708601",
+                "color": "blue",
+                "enabled": false,
+                "name": "Planning",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708602",
+                "color": "indigo",
+                "enabled": false,
+                "name": "Backlog",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200143598071344",
+                "color": "red",
+                "enabled": true,
+                "name": "Blocked",
+                "resource_type": "enum_option"
+              }
+            ],
+            "name": "Amplify Delivery status",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+          },
+          "is_important": true,
+          "parent": {
+            "gid": "1200587322709803",
+            "name": "Client-side encryption (Android, iOS)",
+            "resource_type": "project"
+          },
+          "project": {
+            "gid": "1200587322709803",
+            "name": "Client-side encryption (Android, iOS)",
+            "resource_type": "project"
+          },
+          "resource_type": "custom_field_setting"
+        }
+      ],
+      "default_view": "list",
+      "due_on": null,
+      "due_date": null,
+      "followers": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "is_template": false,
+      "members": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "modified_at": "2021-07-13T23:53:42.644Z",
+      "name": "Client-side encryption (Android, iOS)",
+      "notes": "",
+      "owner": { "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" },
+      "permalink_url": "https://app.asana.com/0/1200587322709803/1200587322709803",
+      "public": true,
+      "resource_type": "project",
+      "start_on": null,
+      "team": { "gid": "1200056430667281", "name": "Amplify Libraries", "resource_type": "team" },
+      "workspace": { "gid": "8442528107068", "name": "amazon.com", "resource_type": "workspace" }
+    },
+    {
+      "gid": "1200587322709774",
+      "archived": false,
+      "color": "light-blue",
+      "created_at": "2021-07-13T04:24:22.337Z",
+      "current_status": null,
+      "custom_fields": [
+        {
+          "gid": "1182097226423118",
+          "enabled": true,
+          "enum_options": [
+            {
+              "gid": "1182097226423121",
+              "color": "aqua",
+              "enabled": true,
+              "name": "Development",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423120",
+              "color": "blue",
+              "enabled": true,
+              "name": "QA",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423123",
+              "color": "purple",
+              "enabled": true,
+              "name": "Planning/Design",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423124",
+              "color": "red",
+              "enabled": true,
+              "name": "Requirements",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182117918207256",
+              "color": "orange",
+              "enabled": true,
+              "name": "Queued",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423119",
+              "color": "yellow-green",
+              "enabled": true,
+              "name": "Done",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423122",
+              "color": "cool-gray",
+              "enabled": true,
+              "name": "Not Started",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1200055983904289",
+              "color": "yellow-orange",
+              "enabled": true,
+              "name": "Deployment Started",
+              "resource_type": "enum_option"
+            }
+          ],
+          "enum_value": {
+            "gid": "1182097226423124",
+            "color": "red",
+            "enabled": true,
+            "name": "Requirements",
+            "resource_type": "enum_option"
+          },
+          "name": "Amplify Status (Portfolio)",
+          "created_by": { "gid": "1142653424674712", "name": "Jake Litwicki", "resource_type": "user" },
+          "display_value": "Requirements",
+          "resource_subtype": "enum",
+          "resource_type": "custom_field",
+          "type": "enum"
+        }
+      ],
+      "custom_field_settings": [
+        {
+          "gid": "1200595615870622",
+          "custom_field": {
+            "gid": "1143292379918547",
+            "name": "Story Points",
+            "precision": 0,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709774", "name": "Cloud-only / local-only models", "resource_type": "project" },
+          "project": {
+            "gid": "1200587322709774",
+            "name": "Cloud-only / local-only models",
+            "resource_type": "project"
+          },
+          "resource_type": "custom_field_setting"
+        },
+        {
+          "gid": "1200595615870634",
+          "custom_field": {
+            "gid": "1199680225867879",
+            "enum_options": [
+              {
+                "gid": "1199680225867880",
+                "color": "cool-gray",
+                "enabled": true,
+                "name": "Not started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867882",
+                "color": "green",
+                "enabled": true,
+                "name": "In progress",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867883",
+                "color": "yellow",
+                "enabled": true,
+                "name": "Code review",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867884",
+                "color": "magenta",
+                "enabled": true,
+                "name": "QA ready",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867885",
+                "color": "red",
+                "enabled": true,
+                "name": "QA changes",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867886",
+                "color": "blue-green",
+                "enabled": true,
+                "name": "Deploy started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200179995173808",
+                "color": "yellow-green",
+                "enabled": true,
+                "name": "Done/Deployed/Merged",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199982544802529",
+                "color": "pink",
+                "enabled": true,
+                "name": "Needs tech design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200108733043320",
+                "color": "purple",
+                "enabled": true,
+                "name": "Needs UX design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867881",
+                "color": "orange",
+                "enabled": true,
+                "name": "Needs requirements",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867887",
+                "color": "none",
+                "enabled": true,
+                "name": "Descoped/Icebox",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200399289360765",
+                "color": "green",
+                "enabled": false,
+                "name": "Done",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434802332391",
+                "color": "aqua",
+                "enabled": false,
+                "name": "Grooming",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708601",
+                "color": "blue",
+                "enabled": false,
+                "name": "Planning",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708602",
+                "color": "indigo",
+                "enabled": false,
+                "name": "Backlog",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200143598071344",
+                "color": "red",
+                "enabled": true,
+                "name": "Blocked",
+                "resource_type": "enum_option"
+              }
+            ],
+            "name": "Amplify Delivery status",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709774", "name": "Cloud-only / local-only models", "resource_type": "project" },
+          "project": {
+            "gid": "1200587322709774",
+            "name": "Cloud-only / local-only models",
+            "resource_type": "project"
+          },
+          "resource_type": "custom_field_setting"
+        }
+      ],
+      "default_view": "list",
+      "due_on": null,
+      "due_date": null,
+      "followers": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "is_template": false,
+      "members": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "modified_at": "2021-07-13T23:53:55.140Z",
+      "name": "Cloud-only / local-only models",
+      "notes": "",
+      "owner": { "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" },
+      "permalink_url": "https://app.asana.com/0/1200587322709774/1200587322709774",
+      "public": true,
+      "resource_type": "project",
+      "start_on": null,
+      "team": { "gid": "1200056430667281", "name": "Amplify Libraries", "resource_type": "team" },
+      "workspace": { "gid": "8442528107068", "name": "amazon.com", "resource_type": "workspace" }
+    },
+    {
+      "gid": "1200587322709745",
+      "archived": false,
+      "color": "light-blue",
+      "created_at": "2021-07-13T04:24:03.389Z",
+      "current_status": null,
+      "custom_fields": [
+        {
+          "gid": "1182097226423118",
+          "enabled": true,
+          "enum_options": [
+            {
+              "gid": "1182097226423121",
+              "color": "aqua",
+              "enabled": true,
+              "name": "Development",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423120",
+              "color": "blue",
+              "enabled": true,
+              "name": "QA",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423123",
+              "color": "purple",
+              "enabled": true,
+              "name": "Planning/Design",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423124",
+              "color": "red",
+              "enabled": true,
+              "name": "Requirements",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182117918207256",
+              "color": "orange",
+              "enabled": true,
+              "name": "Queued",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423119",
+              "color": "yellow-green",
+              "enabled": true,
+              "name": "Done",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423122",
+              "color": "cool-gray",
+              "enabled": true,
+              "name": "Not Started",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1200055983904289",
+              "color": "yellow-orange",
+              "enabled": true,
+              "name": "Deployment Started",
+              "resource_type": "enum_option"
+            }
+          ],
+          "enum_value": {
+            "gid": "1182097226423123",
+            "color": "purple",
+            "enabled": true,
+            "name": "Planning/Design",
+            "resource_type": "enum_option"
+          },
+          "name": "Amplify Status (Portfolio)",
+          "created_by": { "gid": "1142653424674712", "name": "Jake Litwicki", "resource_type": "user" },
+          "display_value": "Planning/Design",
+          "resource_subtype": "enum",
+          "resource_type": "custom_field",
+          "type": "enum"
+        }
+      ],
+      "custom_field_settings": [
+        {
+          "gid": "1200595665001195",
+          "custom_field": {
+            "gid": "1143292379918547",
+            "name": "Story Points",
+            "precision": 0,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709745", "name": "Custom Primary Key support", "resource_type": "project" },
+          "project": { "gid": "1200587322709745", "name": "Custom Primary Key support", "resource_type": "project" },
+          "resource_type": "custom_field_setting"
+        },
+        {
+          "gid": "1200595665001203",
+          "custom_field": {
+            "gid": "1199680225867879",
+            "enum_options": [
+              {
+                "gid": "1199680225867880",
+                "color": "cool-gray",
+                "enabled": true,
+                "name": "Not started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867882",
+                "color": "green",
+                "enabled": true,
+                "name": "In progress",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867883",
+                "color": "yellow",
+                "enabled": true,
+                "name": "Code review",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867884",
+                "color": "magenta",
+                "enabled": true,
+                "name": "QA ready",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867885",
+                "color": "red",
+                "enabled": true,
+                "name": "QA changes",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867886",
+                "color": "blue-green",
+                "enabled": true,
+                "name": "Deploy started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200179995173808",
+                "color": "yellow-green",
+                "enabled": true,
+                "name": "Done/Deployed/Merged",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199982544802529",
+                "color": "pink",
+                "enabled": true,
+                "name": "Needs tech design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200108733043320",
+                "color": "purple",
+                "enabled": true,
+                "name": "Needs UX design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867881",
+                "color": "orange",
+                "enabled": true,
+                "name": "Needs requirements",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867887",
+                "color": "none",
+                "enabled": true,
+                "name": "Descoped/Icebox",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200399289360765",
+                "color": "green",
+                "enabled": false,
+                "name": "Done",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434802332391",
+                "color": "aqua",
+                "enabled": false,
+                "name": "Grooming",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708601",
+                "color": "blue",
+                "enabled": false,
+                "name": "Planning",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708602",
+                "color": "indigo",
+                "enabled": false,
+                "name": "Backlog",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200143598071344",
+                "color": "red",
+                "enabled": true,
+                "name": "Blocked",
+                "resource_type": "enum_option"
+              }
+            ],
+            "name": "Amplify Delivery status",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709745", "name": "Custom Primary Key support", "resource_type": "project" },
+          "project": { "gid": "1200587322709745", "name": "Custom Primary Key support", "resource_type": "project" },
+          "resource_type": "custom_field_setting"
+        }
+      ],
+      "default_view": "list",
+      "due_on": null,
+      "due_date": null,
+      "followers": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "is_template": false,
+      "members": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "modified_at": "2021-07-13T23:53:49.325Z",
+      "name": "Custom Primary Key support",
+      "notes": "",
+      "owner": { "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" },
+      "permalink_url": "https://app.asana.com/0/1200587322709745/1200587322709745",
+      "public": true,
+      "resource_type": "project",
+      "start_on": null,
+      "team": { "gid": "1200056430667281", "name": "Amplify Libraries", "resource_type": "team" },
+      "workspace": { "gid": "8442528107068", "name": "amazon.com", "resource_type": "workspace" }
+    },
+    {
+      "gid": "1200587322709716",
+      "archived": false,
+      "color": "light-blue",
+      "created_at": "2021-07-13T04:23:20.065Z",
+      "current_status": null,
+      "custom_fields": [
+        {
+          "gid": "1182097226423118",
+          "enabled": true,
+          "enum_options": [
+            {
+              "gid": "1182097226423121",
+              "color": "aqua",
+              "enabled": true,
+              "name": "Development",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423120",
+              "color": "blue",
+              "enabled": true,
+              "name": "QA",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423123",
+              "color": "purple",
+              "enabled": true,
+              "name": "Planning/Design",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423124",
+              "color": "red",
+              "enabled": true,
+              "name": "Requirements",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182117918207256",
+              "color": "orange",
+              "enabled": true,
+              "name": "Queued",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423119",
+              "color": "yellow-green",
+              "enabled": true,
+              "name": "Done",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1182097226423122",
+              "color": "cool-gray",
+              "enabled": true,
+              "name": "Not Started",
+              "resource_type": "enum_option"
+            },
+            {
+              "gid": "1200055983904289",
+              "color": "yellow-orange",
+              "enabled": true,
+              "name": "Deployment Started",
+              "resource_type": "enum_option"
+            }
+          ],
+          "enum_value": {
+            "gid": "1182097226423123",
+            "color": "purple",
+            "enabled": true,
+            "name": "Planning/Design",
+            "resource_type": "enum_option"
+          },
+          "name": "Amplify Status (Portfolio)",
+          "created_by": { "gid": "1142653424674712", "name": "Jake Litwicki", "resource_type": "user" },
+          "display_value": "Planning/Design",
+          "resource_subtype": "enum",
+          "resource_type": "custom_field",
+          "type": "enum"
+        }
+      ],
+      "custom_field_settings": [
+        {
+          "gid": "1200595664514063",
+          "custom_field": {
+            "gid": "1143292379918547",
+            "name": "Story Points",
+            "precision": 0,
+            "resource_subtype": "number",
+            "resource_type": "custom_field",
+            "type": "number"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709716", "name": "observeQuery API", "resource_type": "project" },
+          "project": { "gid": "1200587322709716", "name": "observeQuery API", "resource_type": "project" },
+          "resource_type": "custom_field_setting"
+        },
+        {
+          "gid": "1200595664514133",
+          "custom_field": {
+            "gid": "1199680225867879",
+            "enum_options": [
+              {
+                "gid": "1199680225867880",
+                "color": "cool-gray",
+                "enabled": true,
+                "name": "Not started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867882",
+                "color": "green",
+                "enabled": true,
+                "name": "In progress",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867883",
+                "color": "yellow",
+                "enabled": true,
+                "name": "Code review",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867884",
+                "color": "magenta",
+                "enabled": true,
+                "name": "QA ready",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867885",
+                "color": "red",
+                "enabled": true,
+                "name": "QA changes",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867886",
+                "color": "blue-green",
+                "enabled": true,
+                "name": "Deploy started",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200179995173808",
+                "color": "yellow-green",
+                "enabled": true,
+                "name": "Done/Deployed/Merged",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199982544802529",
+                "color": "pink",
+                "enabled": true,
+                "name": "Needs tech design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200108733043320",
+                "color": "purple",
+                "enabled": true,
+                "name": "Needs UX design",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867881",
+                "color": "orange",
+                "enabled": true,
+                "name": "Needs requirements",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1199680225867887",
+                "color": "none",
+                "enabled": true,
+                "name": "Descoped/Icebox",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200399289360765",
+                "color": "green",
+                "enabled": false,
+                "name": "Done",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434802332391",
+                "color": "aqua",
+                "enabled": false,
+                "name": "Grooming",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708601",
+                "color": "blue",
+                "enabled": false,
+                "name": "Planning",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200434810708602",
+                "color": "indigo",
+                "enabled": false,
+                "name": "Backlog",
+                "resource_type": "enum_option"
+              },
+              {
+                "gid": "1200143598071344",
+                "color": "red",
+                "enabled": true,
+                "name": "Blocked",
+                "resource_type": "enum_option"
+              }
+            ],
+            "name": "Amplify Delivery status",
+            "resource_subtype": "enum",
+            "resource_type": "custom_field",
+            "type": "enum"
+          },
+          "is_important": true,
+          "parent": { "gid": "1200587322709716", "name": "observeQuery API", "resource_type": "project" },
+          "project": { "gid": "1200587322709716", "name": "observeQuery API", "resource_type": "project" },
+          "resource_type": "custom_field_setting"
+        }
+      ],
+      "default_view": "list",
+      "due_on": null,
+      "due_date": null,
+      "followers": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "is_template": false,
+      "members": [{ "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" }],
+      "modified_at": "2021-07-20T22:09:02.163Z",
+      "name": "observeQuery API",
+      "notes": "",
+      "owner": { "gid": "1164575046915050", "name": "Rene Brandel", "resource_type": "user" },
+      "permalink_url": "https://app.asana.com/0/1200587322709716/1200587322709716",
+      "public": true,
+      "resource_type": "project",
+      "start_on": null,
+      "team": { "gid": "1200056430667281", "name": "Amplify Libraries", "resource_type": "team" },
+      "workspace": { "gid": "8442528107068", "name": "amazon.com", "resource_type": "workspace" }
+    }
+  ]
+}
