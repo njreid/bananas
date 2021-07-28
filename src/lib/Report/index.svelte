@@ -60,10 +60,16 @@
     })
     return html
   }
+
+  function clearReport() {
+    $projectData = []
+  }
+
 </script>
 
 <template lang="pug">
 section
+  button(on:click="{clearReport}") Back
   h1 {reportName}
   +each('fixedProjects as project, i')
     .project

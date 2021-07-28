@@ -3,6 +3,8 @@
   import ProjectPicker from "./lib/ProjectPicker/index.svelte"
   import Report from "./lib/Report/index.svelte"
 
+  import { loading, projectData } from './lib/stores.js'
+
   export let reportName = ""
   let projects = []
 
@@ -47,11 +49,18 @@
 .nav
   img(src="/favicon.png" width='32px')
   h1 asanabananas
-  ProjectPicker(bind:value="{projects}")
   button.push(on:click="{exportPDF}") Export PDF
 
-#report
-  Report(projects="{projects}")
++if('$loading')
+  .loading
+    h1 LOADING...
+
++if('$projectData.length == 0')
+  #picker
+    ProjectPicker
+  +else()
+    #report
+      Report
 
 </template>
 
@@ -59,7 +68,6 @@
 
 :global(body)
   background-color #e0e0e0
-  font-family 'Calibri'
 
 .nav
   background-color black
@@ -83,5 +91,22 @@
 
   img
     margin-left 10px
+
+
+.loading
+  h1
+    font-size 4em
+    color white
+
+  z-index 10
+  position fixed
+  top 20vh
+  left calc(50vw - 200px)
+  width 400px
+  height 200px
+  display flex
+  align-items center
+  justify-content center
+  background-color rgba(0,0,0,0.5)
 
 </style>
