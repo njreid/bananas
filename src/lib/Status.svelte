@@ -10,11 +10,10 @@
 
 </template>
 
-
 <style lang="stylus">
 
 .status
-  margin 0px 10px
+  margin 0px 10px 0 0
   width 70px
   height 18px
   font-family Helvetica
@@ -28,6 +27,7 @@
   p
     font-weight bold
     font-size 0.6em
+    text-align center
 
 .green
   background-color green
@@ -41,5 +41,7 @@
 .none
   background-color #bbb
 
+.na
+  background-color white
 
 </style>

@@ -41,7 +41,7 @@
 
   function timeString(d) {
     let o = dayjs(d)
-    return o.format('HH:mm UTCZ')
+    return o.format('DD-MMM hh:mm')
   }
 </script>
 
@@ -49,18 +49,18 @@
 
 +if('latest')
   p
-    i {latest.title}
-    | . ({latest.author.name} at {timeString(latest.modified_at)})
-    | [{latest.color.toUpperCase()}]
+    u {latest.title}
+    | {` ${latest.color.toUpperCase()} `}
     | {@html extractSections(latest.text).Summary}
+    | -- {latest.author.name}, {timeString(latest.modified_at)}
     b(on:click="{toggleExpanded}") &nbsp [{expanded ? '-': '+'}]
 +if('expanded')
   +each('remaining as statusUpdate')
     p
-      i {statusUpdate.title}
-      | . ({statusUpdate.author.name} at {timeString(statusUpdate.modified_at)})
-      | [{statusUpdate.color.toUpperCase()}]
+      u {statusUpdate.title}
+      | {` ${latest.color.toUpperCase()} `}
       | {@html extractSections(statusUpdate.text).Summary}
+      | -- {statusUpdate.author.name}, {timeString(statusUpdate.modified_at)}
 </template>
 
 <style lang="stylus">
@@ -74,6 +74,11 @@ h1
   font-size 1em
 
 p
-  margin 0 0 4px 0
+  margin 0 0 5px 0
+  text-align justify
+
+b
+  font-family Consolas
+  font-size 0.8em
 
 </style>

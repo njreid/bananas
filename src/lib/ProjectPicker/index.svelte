@@ -1,114 +1,68 @@
 <script lang="ts">
-  export let projectId = "";
-  export let projects = [];
+  // import * as Asana from "asana"
+  export let projectId = ""
 
-  import { onMount } from "svelte";
-  import { projectData, loading } from "../stores.js";
+  import { onMount } from "svelte"
+  import StatusUpdate from "../StatusUpdate.svelte"
+  import Status from "../Status.svelte"
+  import ExpandedProject from "../ExpandedProject.svelte"
+  import { asana, rootData, loading, selectedPortfolio } from "../stores.js"
+  import { replaceURLs } from "../utils"
 
-  let portfolios = [];
-
-  onMount(async () => {
-    loading.set(true)
-    fetch("https://app.asana.com/api/1.0/portfolios/1200209109173696/items?opt_expand=color", {
-      // fetch('https://app.asana.com/api/1.0/portfolios/1200209109173696/items?opt_expand=.', {
-      headers: {
-        authorization:
-          "Bearer 1/1200375434717708:ebc8099cd11eb8fed4a5921f0752ae59",
-        accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        loading.set(false)
-        portfolios = data.data;
-      })
-      .catch((error) => {
-        loading.set(false)
-        console.log(error);
-        return [];
-      });
-  });
-
-  function loadProjects(selected) {
-    loading.set(true)
-    fetch(
-      "https://app.asana.com/api/1.0/portfolios/" +
-        selected +
-        "/items?opt_expand=.",
-      {
-        headers: {
-          authorization:
-            "Bearer 1/1200375434717708:ebc8099cd11eb8fed4a5921f0752ae59",
-          accept: "application/json",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        loading.set(false)
-        console.log(data);
-        projectData.set(data.data);
-      })
-      .catch((error) => {
-        loading.set(false)
-        console.log(error);
-        return [];
-      });
-  }
-
-  const COLORS = {
-    'light-red': '#ffcccb',
-    'light-blue': '#ADD8E6',
-    'dark-pink': '#C71585',
-    'dark-purple': '#4B0082',
-  }
-
-  function lookupColor(name) {
-    if (name in COLORS) {
-      return COLORS[name]
-    }
-    else {
-      return "#555"
-    }
-  }
-
+  let projectStatuses = {}
 </script>
 
 <template lang="pug">
-h2 Portfolios
-.portfolios
-  +each('portfolios as portfolio')
-    .portfolio( 
-      style="background-color: {lookupColor(portfolio.color)}"
-      on:click="{function() { loadProjects(portfolio.gid)}}")
-      p {portfolio.name}
+
+.wrapper
+  #report
+    h2 Goals
+    .portfolios
+      +each('$rootData as portfolio')
+        .portfolio 
+          .title
+            p 
+             a(href="https://app.asana.com/0/{portfolio.gid}/list", target="_blank") { portfolio.name }
+          .subtitle
+            p 
+              Status(status="{ portfolio.current_status ? portfolio.current_status.color : 'none'}") 
+            p Owner: {portfolio.owner.name}
+          StatusUpdate(update="{portfolio.current_status}")
+          ExpandedProject(projectId="{portfolio.gid}")
+
 </template>
 
 <style lang="stylus">
-h2
-  margin-left 20px
-  margin-right 10px
 
-button 
-  margin-left 10px
+.wrapper 
+  margin 0 10px
+
+#report
+  margin auto
+  max-width 1100px
+
+.subtitle
+  display flex
+  height 30px
+  p
+    margin-right 20px
 
 .portfolios
-  margin 30px
-  display flex
-  flex-flow wrap
+  margin 0
 
 .portfolio
+  margin 10px 0 10px 0
+
+.title
   display flex
-  align-items center
-  justify-content center
-  margin 6px
-  background-color #555
-  width 200px
-  height 80px
-  padding 20px
+  background-color black
+  padding 4px 10px
   color white
   font-size 1.2em
-  box-shadow 5px 5px 15px 5px #b5b2b2
+  p
+    padding 0
+    margin 4px
+    a
+      color white
 
 </style>

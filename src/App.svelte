@@ -1,39 +1,43 @@
 <script lang="ts">
-
   import ProjectPicker from "./lib/ProjectPicker/index.svelte"
   import Report from "./lib/Report/index.svelte"
+  import Loading from "./lib/Loading.svelte"
+  import Authorizer from "./lib/Authorizer.svelte"
 
-  import { loading, projectData } from './lib/stores.js'
+  import { loading, projectData, title } from "./lib/stores.js"
 
   export let reportName = ""
   let projects = []
 
   function exportPDF() {
-    let element = document.getElementById('report')
+    let element = document.getElementById("report")
     var opt = {
       margin: 0.2,
-      filename: reportName + '.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+      filename: reportName + ".pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 1.4 },
+      jsPDF: { unit: "in", format: "letter", orientation: "landscape" },
       pagebreak: {
-        mode: 'css',
-        avoid: '.project',
+        mode: "css",
+        avoid: [".project", ".portfolio"],
       },
       pdfCallback: pdfCallback,
     }
-    let worker = html2pdf().set(opt).from(element).save()
+    let worker = html2pdf()
+      .set(opt)
+      .from(element)
+      .save($title + ".pdf")
   }
 
   function pdfCallback(pdfObject) {
     var number_of_pages = pdfObject.internal.getNumberOfPages()
     var pdf_pages = pdfObject.internal.pages
-    var myFooter = 'Footer info'
+    var myFooter = "Footer info"
     for (var i = 1; i < pdf_pages.length; i++) {
       // We are telling our pdfObject that we are now working on this page
       pdfObject.setPage(i)
       // The 10,200 value is only for A4 landscape. You need to define your own for other page sizes
-      pdfObject.text(myFooter + ' Page ' + i, 10, 10)
+      pdfObject.text(myFooter + " Page " + i, 10, 10)
     }
   }
 </script>
@@ -51,9 +55,9 @@
   h1 asanabananas
   button.push(on:click="{exportPDF}") Export PDF
 
-+if('$loading')
-  .loading
-    h1 LOADING...
+Loading
+
+Authorizer
 
 +if('$projectData.length == 0')
   #picker
@@ -67,11 +71,10 @@
 <style lang="stylus">
 
 :global(body)
-  background-color #e0e0e0
+  background-color white
 
 .nav
   background-color black
-  box-shadow 3px 3px 20px 5px rgba(0,0,0,0.5)
   display flex
   flex-direction row
   align-items center
@@ -82,7 +85,6 @@
     margin auto 0 auto 6px
     color #FFC800
     font-size 20pt
-    // font-weight bold
     letter-spacing -2px
     padding 0
 
@@ -91,7 +93,6 @@
 
   img
     margin-left 10px
-
 
 .loading
   h1

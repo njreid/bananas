@@ -1,20 +1,20 @@
 <script lang="ts">
-  import Status from '../Status.svelte'
-  import Stage from '../Stage.svelte'
-  import ProjectStatusUpdates from '../ProjectStatusUpdates.svelte'
+  import Status from "../Status.svelte"
+  import Stage from "../Stage.svelte"
+  import ProjectStatusUpdates from "../ProjectStatusUpdates.svelte"
 
-  import { projectData } from '../stores.js'
+  import { projectData, selectedPortfolio } from "../stores.js"
 
   function splitLines(str) {
     if (!str) return []
-    return str.split('\n')
+    return str.split("\n")
   }
 
   function toSnakeCase(str) {
-    if (!str) return ''
+    if (!str) return ""
     return str
       .split(/[ \t()]+/)
-      .join('_')
+      .join("_")
       .toLowerCase()
   }
 
@@ -27,7 +27,7 @@
   }
 
   function indexCustomFields(projects) {
-    let fixed = projects.map(p => {
+    let fixed = projects.map((p) => {
       p.fields = p.custom_fields.reduce((acc, cur) => {
         acc[toSnakeCase(cur.name)] = cur
         return acc
@@ -38,7 +38,7 @@
     return fixed
   }
 
-  let reportName = 'Amplify iOS Roadmap'
+  let reportName = "Amplify iOS Roadmap"
   let fixedProjects = []
   $: fixedProjects = indexCustomFields($projectData)
 
@@ -46,31 +46,37 @@
     if (!message) return
 
     let urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g
-    let html = message.replace(urlRegex, url => {
+    let html = message.replace(urlRegex, (url) => {
       let hyperlink = url
-      if (!hyperlink.match('^https?://')) {
-        hyperlink = 'http://' + hyperlink
+      if (!hyperlink.match("^https?://")) {
+        hyperlink = "http://" + hyperlink
       }
 
       // Replace the url with hostname
-      let tmp = document.createElement('a')
+      let tmp = document.createElement("a")
       tmp.href = url
       let label = tmp.hostname
-      return '<a href="' + hyperlink + '" target="_blank" rel="noopener noreferrer">' + label + '</a>'
+      return (
+        '<a href="' +
+        hyperlink +
+        '" target="_blank" rel="noopener noreferrer">' +
+        label +
+        "</a>"
+      )
     })
     return html
   }
 
   function clearReport() {
     $projectData = []
+    $selectedPortfolio = {}
   }
-
 </script>
 
 <template lang="pug">
 section
   button(on:click="{clearReport}") Back
-  h1 {reportName}
+  h1 Amplify {$selectedPortfolio?.name} Roadmap
   +each('fixedProjects as project, i')
     .project
       .title
@@ -82,8 +88,8 @@ section
       Stage(current="{project.fields.amplify_status_portfolio_?.enum_value?.name}")
       +each('splitLines(replaceURLs(project.notes)) as l')
         p {@html l}
-      p Owner: {project.owner.name}
       ProjectStatusUpdates(latest="{project.current_status}")
+      p Project Owner: {project.owner.name}
 </template>
 
 <style lang="stylus">
